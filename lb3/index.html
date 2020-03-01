@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Заказ мебели</h1>
+    <form class="" action="" method="post">
+      <div class="input-wrapper">
+        <h4>Мебель</h4>
+        <select name="furniture" class="furniture">
+          <option value="cupboard">Шкаф</option>
+          <option value="table">Стол</option>
+          <option value="sideboard">Сервант</option>
+        </select>
+      </div>
+      <div class="input-wrapper">
+        <h4>Материал</h4>
+        <select name="material" class="material">
+          <option value="oak">Дуб</option>
+          <option value="nut">Орех</option>
+          <option value="beech">Бук</option>
+        </select>
+      </div>
+      <div class="input-wrapper">
+        <h4>Количество</h4>
+        <input type="number" class="count" value="" min="1" max="50">
+      </div>
+    </form>
+    <button class="submitButton">Click</button>
+  </body>
+</html>

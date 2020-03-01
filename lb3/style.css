@@ -1,0 +1,13 @@
+.input-wrapper {
+  width: 400px;
+  padding: 0;
+  margin: 15px;
+}
+
+.input-wrapper * {
+  display: inline-block;
+}
+
+.input-wrapper h4 {
+  margin: 0;
+}
