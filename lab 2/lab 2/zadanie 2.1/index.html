@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="script.js" defer>
+    </script>
+    <title>Пять событий с мышкой</title>
+  </head>
+  <body>
+    <div align=center>
+      <p
+    style="background:white;color:black" 
+      onclick="clickOnSecond()"
+      id="1">
+      Щёлкните по мне мышкой</p>
+      <p onmouseover="overThird()"
+         onmouseup="upThird()"
+         onmousedown="downThird()"
+         id="2">
+         На этом тексте нажмите, подержите и отпустите левую кнопку мышки</p>
+      <p
+      onmouseover="overFourth()"
+      onmouseout="outFourth()"
+      id="3">
+      Медленно проведите курсором мышки по этой надписи</p>
+    </div>
+  </body>
+</html>
