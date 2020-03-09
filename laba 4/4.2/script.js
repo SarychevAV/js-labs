@@ -8,9 +8,7 @@ var centerY = canvas.height / 2
 var a = 40
 var b = 60
 
-//тут должны отрисовываться полуоси
-
-
+//тут должны отрисовываться полуос
 function plot() {
 ctx.clearRect(0,0,canvas.width,canvas.height);
 a = document.getElementById("a").value;
@@ -26,7 +24,6 @@ ctx.stroke();
 ctx.restore();
 ctx.closePath();
 ctx.stroke();
-	
 ctx.save();
 ctx.beginPath();
 ctx.translate(centerX, centerY);
