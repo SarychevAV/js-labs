@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="style.css">
+<title>Эллипс</title>
+</head>
+
+<body>
+<div class="main" align="center">
+  <h1>Построение эллипса</h1>
+  <div class="left-inner"> 
+  Горизонтальная полуось а =
+  <input type="number" value="a" id="a" class="inputs"> 
+  Вертикальная полусь b =
+  <input type="number" value="b" id="b" class="inputs">
+  <input type="button" value="Выполнить" onClick="plot()">
+  </div>
+  <div class="right-inner"> 
+  <canvas id="canv" width="150" height="150"></canvas>
+  </div>
+</div>
+</body>
+</html>

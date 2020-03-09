@@ -1,0 +1,14 @@
+.main{
+	
+}
+.left-inner{
+	display: inline-block;
+	vertical-align: top;
+}
+.right-inner{
+	display: inline-block;
+}
+
+.inputs{
+	display: block;
+}
