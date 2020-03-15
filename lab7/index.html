@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="script.js" defer></script>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Наименование товара</th>
+          <th>Цена за единицу</th>
+          <th>Количество</th>
+          <th>Стоимость</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr id="sumCol">
+          <td colspan="3">Итого</td>
+          <td id="allSum">0</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>Изменение цены и количества</h4>
+    <p>
+      <label>Товар .........</label>
+      <input id="product" type="text" value="Молоко">
+    </p>
+    <p>
+      <label>Цена ..........</label>
+      <input id="cost" type="number" value="2">
+    </p>
+    <p>
+      <label>Количество</label>
+      <input id="count" type="number" name="" value="4">
+    </p>
+    <button id="addButton" type="button" name="add">Добавить</button>
+  </body>
+</html>
