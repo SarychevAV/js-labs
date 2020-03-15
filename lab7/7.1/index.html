@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>ТРИГОНОМЕТРИЧЕСКИЕ ФУНКЦИИ</h1>
+    <h4 style="display: inline-block;">Функция</h4>
+    <select class="function" name="">
+      <option value="sin">синус</option>
+      <option value="cos">косинус</option>
+      <option value="tg">тангенс</option>
+    </select>
+    <h4>Угол должен быть больше нуля и меньше 90 градусов</h4>
+    <h4 style="display: inline-block;">Начальный градусх</h4>
+    <input type="number" class="min" value="0" min="0" max="90"><br>
+    <h4 style="display: inline-block;">Конечный градус</h4>
+    <input type="number" class="max" value="90" min="0" max="90"><br>
+    <h4 style="display: inline-block;">Шаг</h4>
+    <input type="number" class="step" value="0" min="0" max="90">
+    <input type="button" class="submit" value="Вычислить">
+    <br>
+    <br>
+  </body>
+</html>
