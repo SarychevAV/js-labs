@@ -1,0 +1,45 @@
+<HTML>
+  <HEAD>
+    <TITLE>Перетаскивание</TITLE>
+</HEAD>
+<BODY onload="init()">
+  <DIV id="er" style="position:absolute;left:0;top:0;width:500;height:500;background-color:#C0C0C0">
+    <DIV id="kv" style="position:relative;left:10;top:10;width:50;height:50;background-color:#FF0000">
+    </DIV>
+  </DIV>
+  <script>
+    flag=false;
+    function init() {
+    document.all.kv.onmousemove=dragIt;
+    document.all.kv.onmouseup=osvobodi;
+    document.all.kv.onmousedown=zachvat;
+    }
+    function dragIt(evt) {
+    sobytie = (evt) ? evt : (window.event) ? window.event : "";
+    if(flag) {
+    document.all.kv.style.top=sobytie.clientY-25;
+    document.all.kv.style.left=sobytie.clientX-25;
+    if
+    (parseInt(document.all.kv.style.top)<parseInt(document.all.er.style.top)) {
+    document.all.kv.style.top=document.all.er.style.top;
+    }
+    if (parseInt(document.all.kv.style.left) < parseInt(document.all.er.style.left)) {
+    document.all.kv.style.left=document.all.er.style.left;
+    }
+    var t=parseInt(document.all.kv.style.top)
+    +parseInt(document.all.kv.style.height);
+    var ter=parseInt(document.all.er.style.top)
+    +parseInt(document.all.er.style.height);
+    var l=parseInt(document.all.kv.style.left)
+    +parseInt(document.all.kv.style.width);
+    var ler=parseInt(document.all.er.style.left)
+    +parseInt(document.all.er.style.width);
+    if (t>ter) { document.all.kv.style.top=ter - parseInt(document.all.kv.style.height); }
+    if (l>ler) { document.all.kv.style.left=ler - parseInt(document.all.kv.style.width); }
+    }
+    }
+    function osvobodi() { flag=false; }
+    function zachvat() { flag=true; }
+  </script>
+</BODY>
+</HTML>
