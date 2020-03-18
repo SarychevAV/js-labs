@@ -2,41 +2,51 @@
   <HEAD>
     <TITLE>Движение фотографии</TITLE>
   </HEAD>
-<BODY style="background: #ccc;" onclick="Start_stop()">
-  <BUTTON ID="B1" STYLE="position:absolute; left:600; top:5">
-    Запустить
+<BODY style="background-image:url(lab.jpg); background-repeat: no-repeat; background-size: ;" onclick="Start_stop()">
   </button>
-  <IMG ID="lv" src="LV.png"
-    STYLE="position:absolute;top:300;left:300;height:100px; weight:100px">
+  <IMG ID="lv" src="man.png" alt
+    STYLE="position:absolute;top:10px;left:20px;height:170px; width:100px">
 </BODY>
 <SCRIPT>
 var x=0;
 var y=0;
-st=false
+var left = parseInt(document.all.lv.style.left,10);
+var top = parseInt(document.all.lv.style.top,10);
+flag=true;
+
+
 function Start_stop(){
-  console.log("hello");
   var e=window.event;
   x = e.clientX;
   y = e.clientY;
-    st=false //заменить надпись на кнопке с именем В1
-    document.all.B1.innerHTML="Запустить"
-    proc=window.setInterval("move()",100)
-    st=true
-    document.all.B1.innerHTML="Стоп"
-  }
-var step = 1;
-function move() {
-  if (document.all.lv.style.left<x){
-    document.all.lv.style.left=document.all.lv.style.left+step+'px';
+  if (flag) {
+    proc=window.setInterval("move()",1);
+    flag=false;
   } else {
-    document.all.lv.style.left=document.all.lv.style.left-step+'px';
-  }
-  if (document.all.lv.style.top<y){
-    document.all.lv.style.top=document.all.lv.style.top+step+'px';
-  } else {
-    document.all.lv.style.top=document.all.lv.style.top-step+'px';
-  }
+    window.clearInterval(proc);
+    proc=window.setInterval("move()",1);
 
+  }
 }
+
+function move() {
+  step=3;
+  var weight = parseInt(document.all.lv.style.width,10)/2;
+  var height = parseInt(document.all.lv.style.height,10)/2
+  var left = parseInt(document.all.lv.style.left,10)+weight;
+  var top = parseInt(document.all.lv.style.top,10)+height;
+  if (left+step < x) {
+    document.all.lv.style.left=parseInt(document.all.lv.style.left,10)+step+'px';
+  }
+  if (left-step > x) {
+    document.all.lv.style.left=parseInt(document.all.lv.style.left,10)-step+'px';
+  }
+  if (top+step < y) {
+    document.all.lv.style.top=parseInt(document.all.lv.style.top,10)+step+'px';
+  }
+  if (top-step > y ){
+    document.all.lv.style.top=parseInt(document.all.lv.style.top,10)-step+'px';
+  }
+ }
 </script>
 </HTML>
